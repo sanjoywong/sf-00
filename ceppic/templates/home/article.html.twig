@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<ul>
+<li>Titre : {{ article.titre }} </li>
+<li>Description : {{ article.description }} </li>
+<li>Catégorie : {{ article.categorie.titre }} </li>
+</ul>
+{% endblock %}
