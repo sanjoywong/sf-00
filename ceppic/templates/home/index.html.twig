@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+	<h2>Liste des articles</h2>
+
+	<ul>
+
+		{% for article in liste_article %}
+
+			<div class="card" style="width: 18rem;">
+				<div class="card-body">
+					<h5 class="card-title">{{ article.titre }}</h5>
+					<p class="card-text">{{ article.titre }} - <a href="{{ path ('route_article', {'id': article.id}) }}">lien</a></p>			
+
+				</div>
+			</div>
+
+		{% endfor %}
+
+	</ul>
+{% endblock %}
