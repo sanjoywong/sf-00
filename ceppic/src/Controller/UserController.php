@@ -24,7 +24,7 @@ class UserController extends AbstractController
     #[Route('/new', name: 'app_user_new', methods: ['GET', 'POST'])]
     public function new(Request $request, UserRepository $userRepository): Response
     {
-        $user = new User();
+       /*  $user = new User();
         $form = $this->createForm(UserType::class, $user);
         $form->handleRequest($request);
 
@@ -37,7 +37,9 @@ class UserController extends AbstractController
         return $this->renderForm('user/new.html.twig', [
             'user' => $user,
             'form' => $form,
-        ]);
+        ]); */
+        return $this->render('registration/register.html.twig',[]);
+
     }
 
     #[Route('/{id}', name: 'app_user_show', methods: ['GET'])]
